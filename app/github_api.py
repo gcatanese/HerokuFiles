@@ -3,8 +3,7 @@ from github import Github
 from config import get_github_access_token
 
 REPO_NAME = 'HerokuFiles'
-FOLDER_NAME = 'files'
-FILE_NAME = 'files/file.json'
+
 
 github = Github(get_github_access_token())
 
@@ -37,8 +36,10 @@ def put_file(filename, content):
     repository = github.get_user().get_repo(REPO_NAME)
 
     if check_file_exist(filename):
+        print(f'update_file {filename}')
         f = get_file(filename)
-        f = repository.update_file(filename, "commit test", content, f.sha)
+        f = repository.update_file(filename, "update_file via PyGithub", content, f.sha)
     else:
-        f = repository.create_file("test.txt", "commit test", content)
+        print(f'create_file {filename}')
+        f = repository.create_file(filename, "create_file via PyGithub", content)
 

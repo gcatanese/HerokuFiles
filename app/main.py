@@ -1,14 +1,12 @@
-from flask import Flask, request, Response
-from flask import send_file
 import logging
-import requests
 import os
+
+from flask import Flask, request
+
 from github_api import *
 
 try:
     app = Flask(__name__)
-
-    print(check_file_exist('files/file.json'))
 
     logging.basicConfig(level=logging.DEBUG)
     logging.getLogger('werkzeug').setLevel(logging.ERROR)
@@ -26,30 +24,54 @@ def ping():
     return "ping Ok"
 
 
+@app.route('/check')
+def check():
+    """
+    Check file exists
+    :return:
+    """
+    logging.info('/check')
+
+    # filename (ie files/file.json)
+    filename = request.args.get('filename')
+
+    ret = check_file_exist(filename)
+
+    return str(ret)
+
+
 @app.route('/get')
 def get():
     """
-    Ping the endpoint
+    Get file
     :return:
     """
     logging.info('/get')
 
-    g = get_file()
+    # filename (ie files/file.json)
+    filename = request.args.get('filename')
 
-    return g.decoded_content.decode()
+    file = get_file(filename)
+
+    return file.decoded_content.decode()
 
 
-@app.route('/put')
+@app.route('/put', methods=['POST'])
 def put():
     """
-    Ping the endpoint
+    Store file
     :return:
     """
-    logging.info('/get')
+    logging.info('/put')
 
-    put_file()
+    # filename (ie files/file.json)
+    filename = request.args.get('filename')
+    content = str(request.json)
+
+    put_file(filename, content)
 
     return "Ok"
+
 
 def get_port():
     """
@@ -60,7 +82,4 @@ def get_port():
 
 
 if __name__ == '__main__':
-
-    logging.info('Starting up')
-
     app.run(debug=True, port=get_port(), host='0.0.0.0')
