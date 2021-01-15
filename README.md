@@ -14,6 +14,10 @@ Applications which need to persist data should rely on an external service like 
 
 Use a Github repository and put/get files using [PyGithub](https://github.com/PyGithub/PyGithub)
 
+Notes:
+* create Access Token from the Github account (Account -> Settings -> Developer Settings -> Personal Access Token)
+* define the token as Heroku Config Vars (heroku config:set GITHUB_ACCESS_TOKEN=xyz)
+
 **Create a file**
 ```
 github = Github('access_token)
@@ -44,3 +48,39 @@ curl http://localhost:5000/get?filename=files/file.json
 
 curl -i -X POST -H "Content-Type: application/json" -d "{\"name\":\"beppe\",\"city\":\"amsterdam\"}" http://localhost:5000/put?filename=files/file.json
 ```
+
+### Amazon S3
+
+Not free but extremely cheap, for very low usage it won't charge.
+Use S3 and put/get files using Python [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+
+Notes:
+* create AWS credentials from [IAM Console](https://console.aws.amazon.com/iam/home#/home) 
+* define the credentials as Heroku Config Vars (heroku config:set AWS_ACCESS_KEY_ID=xyz)
+
+**Get a file**
+```
+session = boto3.session.Session()
+
+s3 = session.client(
+    service_name='s3',
+    aws_access_key_id='xyz',
+    aws_secret_access_key='abc'
+)
+
+s3.download_file(Bucket='bucket_name', Key='dir/a.txt', Filename=/tmp/a.txt)
+```
+
+**Put a file**
+```
+session = boto3.session.Session()
+
+s3 = session.client(
+    service_name='s3',
+    aws_access_key_id='xyz',
+    aws_secret_access_key='abc'
+)
+
+s3.upload_file(Bucket='bucket_name', Key='dir/a.txt', Filename=/tmp/a.txt)
+```
+
