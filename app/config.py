@@ -19,3 +19,16 @@ def get_aws_secret_access_key():
 
 def get_dropbox_access_token():
     return os.environ.get("DROPBOX_ACCESS_TOKEN", "")
+
+
+def get_ftp_host():
+    return os.environ.get("FTP_HOST", "")
+
+
+def get_ftp_username():
+    return os.environ.get("FTP_USERNAME", "")
+
+
+def get_ftp_password():
+    return os.environ.get("FTP_PASSWORD", "")
+
