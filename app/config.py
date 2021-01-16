@@ -15,3 +15,7 @@ def get_aws_access_key_id():
 
 def get_aws_secret_access_key():
     return os.environ.get('AWS_SECRET_ACCESS_KEY')
+
+
+def get_dropbox_access_token():
+    return os.environ.get("DROPBOX_ACCESS_TOKEN", "")
