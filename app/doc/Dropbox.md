@@ -28,7 +28,7 @@ dbx.files_upload(f.read(), filename, mute=True)
 ```
 dbx = dropbox.Dropbox('access_token')
 
-filename = '/dropbx_root/file.json'
+filename = '/dropbox_root/file.json'
 f, r = dbx.files_download(filename)
 
 print(r.content)
