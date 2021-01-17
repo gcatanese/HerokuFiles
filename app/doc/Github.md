@@ -8,7 +8,7 @@ Store files on any of your Github private or public repositories using [PyGithub
 
 Generate a Github Access Token necessary to authenticate the API calls: go to `Account -> Settings -> Developer Settings -> Personal Access Token`
 
-Grant the token the necessary privileges (read/write into repositories) and **never** show or share your tokens.
+Grant the token the necessary privileges (read/write into repositories) and **NEVER** show or share your tokens.
 
 See Github documentation if unsure: [Creating a personal access token
 ](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
