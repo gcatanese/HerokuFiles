@@ -14,9 +14,9 @@ For applications that require low IO activities (save some changes in file, uplo
 few remote storage cloud services which offer a free tier, some of them limiting the size and/or features available.
 These are definitely good alternatives if the application is not storing a large volume of data or save confidential information.
 
-* [Github](app/doc/Github.md)
-* [S3](app/doc/S3.md)
-* [Dropbox](app/doc/Dropbox.md)
-* [DriveHQ (FTP)](app/doc/DriveHQ.md)
+* [Github](doc/Github.md)
+* [S3](doc/S3.md)
+* [Dropbox](doc/Dropbox.md)
+* [DriveHQ (FTP)](doc/DriveHQ.md)
 
 
