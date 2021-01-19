@@ -1,52 +1,25 @@
-# Amazon S3
+# DriveHQ
 
-Amazon S3 (Simple Storage Service) in the remote storage offered by Amazon. It is not entirely free but extremely cheap, 
-for very low usage it won't even charge.
-Using Python [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) it is pretty simple to
-access and manage any file type.   
-A great plus of this option is that there are several other S3 compatible storage services, which makes easier
-to move to a different provider if needed. 
+[DriveHQ](https://www.drivehq.com/) is a file server provider supporting FTP and WebDAV. It offers a 5 Free GB Basic Service.
+ 
+Using the Python `ftplib` module it is pretty simple to store and fetch files via FTP.
 
 Notes:
-* create AWS credentials from [IAM Console](https://console.aws.amazon.com/iam/home#/home) 
-
-**Get a file**
-```
-session = boto3.session.Session()
-
-s3 = session.client(
-    service_name='s3',
-    aws_access_key_id='xyz',
-    aws_secret_access_key='abc'
-)
-
-s3.download_file(Bucket='bucket_name', Key='dir/a.txt', Filename=/tmp/a.txt)
-```
-
-**Put a file**
-```
-session = boto3.session.Session()
-
-s3 = session.client(
-    service_name='s3',
-    aws_access_key_id='xyz',
-    aws_secret_access_key='abc'
-)
-
-s3.upload_file(Bucket='bucket_name', Key='dir/a.txt', Filename=/tmp/a.txt)
-```
+* signup for a DriveHQ Basic Account
+* login with the same credentials using the Python api
 
 
 **Example**
 
-Checkout [sample code](https://github.com/gcatanese/HerokuFiles/tree/main/app/doc/S3_api.py) in dropbox_api.py
+Checkout [sample code](https://github.com/gcatanese/HerokuFiles/tree/main/app/doc/ftp_api.py) in ftp_api.py
 
 ## Deploy to Heroku
 
 Before deploying to Heroku make sure to define the AWS credentials as environment variables and create the corresponding Heroku Config Vars
 ```
-heroku config:set AWS_ACCESS_KEY_ID=xyz)
-heroku config:set AWS_SECRET_ACCESS_KEY=abc)
+heroku config:set FTP_HOST=ftp.drivehq.com
+heroku config:set FTP_USER=username
+heroku config:set FTP_PWD=password
 ```
 
 
