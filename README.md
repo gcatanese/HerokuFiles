@@ -12,7 +12,7 @@ Applications which need to persist data should rely on an external service like 
 
 For applications that need to store files there are few remote storage cloud services offering a **free tier**, some of them limiting the size and/or the features available.
   
-They all provide a secure (tokens, credentials) access via an API and can be suitable for both projects under development or production (see details of each provider):
+They all provide a secure (tokens, credentials) access via APIs and are suitable for both projects under development or in production (see details of each provider):
 
 * [Github](doc/Github.md)
 * [S3](doc/S3.md)
