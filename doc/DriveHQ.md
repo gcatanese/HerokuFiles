@@ -11,7 +11,7 @@ Notes:
 
 **Example**
 
-Checkout [sample code](https://github.com/gcatanese/HerokuFiles/tree/main/app/doc/ftp_api.py) in ftp_api.py
+Checkout [sample code](https://github.com/gcatanese/HerokuFiles/tree/main/app/ftp_api.py) in ftp_api.py
 
 ## Deploy to Heroku
 
