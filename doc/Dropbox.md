@@ -36,7 +36,7 @@ print(r.content)
 
 **Example**
 
-Checkout [sample code](https://github.com/gcatanese/HerokuFiles/tree/main/app/doc/dropbox_api.py) in dropbox_api.py
+Checkout [sample code](https://github.com/gcatanese/HerokuFiles/tree/main/app/dropbox_api.py) in dropbox_api.py
 
 ## Deploy to Heroku
 
