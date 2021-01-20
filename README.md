@@ -10,10 +10,9 @@ Applications which need to persist data should rely on an external service like 
 
 ## Free options for remote file storage 
 
-For applications that require limited IO activities (save some changes in file, upload small number of files) there are 
-few remote storage cloud services offering a **free tier**, some of them limiting the size and/or the features available.
+For applications that need to store files there are few remote storage cloud services offering a **free tier**, some of them limiting the size and/or the features available.
   
-These are definitely good alternatives if the application does need to deal with a large volume of data or saving confidential information.
+They all provide a secure (tokens, credentials) access via an API and can be suitable for both projects under development or production (see details of each provider):
 
 * [Github](doc/Github.md)
 * [S3](doc/S3.md)
