@@ -18,5 +18,6 @@ They all provide a secure (tokens, credentials) access via APIs and are suitable
 * [S3](doc/S3.md)
 * [Dropbox](doc/Dropbox.md)
 * [DriveHQ (FTP)](doc/DriveHQ.md)
+* [Gitlab](doc/Gitlab.md)
 
 
