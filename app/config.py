@@ -32,3 +32,8 @@ def get_ftp_username():
 def get_ftp_password():
     return os.environ.get("FTP_PASSWORD", "")
 
+
+def get_gitlab_access_token():
+    return os.environ.get("GITLAB_ACCESS_TOKEN", "")
+
+
