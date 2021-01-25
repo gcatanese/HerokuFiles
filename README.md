@@ -19,5 +19,7 @@ They all provide a secure (tokens, credentials) access via APIs and are suitable
 * [Dropbox](doc/Dropbox.md)
 * [DriveHQ (FTP)](doc/DriveHQ.md)
 * [Gitlab](doc/Gitlab.md)
+* [Gmail](doc/Gmail.md)
+
 
 
