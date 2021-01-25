@@ -6,3 +6,4 @@ boto3==1.16.55
 dropbox===11.0.0
 pyftpdlib===1.5.6
 python-gitlab===2.5.0
+yagmail===0.14.245

@@ -37,3 +37,9 @@ def get_gitlab_access_token():
     return os.environ.get("GITLAB_ACCESS_TOKEN", "")
 
 
+def get_gmail_username():
+    return os.environ.get("GMAIL_USERNAME", "")
+
+
+def get_gmail_password():
+    return os.environ.get("GMAIL_PASSWORD", "")
