@@ -2,7 +2,7 @@ Flask==1.1.2
 requests==2.25.1
 python-dotenv===0.15.0
 PyGithub===1.54.1
-boto3==1.16.59
+boto3==1.17.3
 dropbox===11.1.0
 pyftpdlib===1.5.6
 python-gitlab===2.6.0
