@@ -1,10 +1,10 @@
 # Remote files with Heroku
 
 Heroku file system is [ephemeral](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem), meaning Dyno applications can write on the file system but 
-changes are discared when the Dyno restarts.
+changes are discarded when the Dyno restarts.
 
 It is also important to remember that Heroku Dynos restart (at least) every 24 hrs (see [cycling](https://devcenter.heroku.com/articles/dynos#restarting)), 
-dus deleting all local filesystem changes.
+hence deleting all local filesystem changes.
 
 Applications which need to persist data should rely on an external service like a database or a remote storage.
 
