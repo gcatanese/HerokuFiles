@@ -9,7 +9,6 @@ updates:
   ignore:
   - dependency-name: boto3
     versions:
-    - 1.16.62
     - 1.16.63
     - 1.17.0
     - 1.17.1
