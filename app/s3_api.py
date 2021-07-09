@@ -24,8 +24,6 @@ def download_object(bucket_name, key, filename):
     """
     print(f"filename {filename}")
 
-    print(filename)
-
     s3.download_file(Bucket=bucket_name, Key=key, Filename=filename)
 
     print(f"Object {key} has been downloaded to " + filename)
