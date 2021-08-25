@@ -1,5 +1,5 @@
 Flask==2.0.1
-requests==2.25.1
+requests==2.26.0
 python-dotenv===0.18.0
 PyGithub===1.55
 dropbox===11.13.2
