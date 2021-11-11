@@ -14,7 +14,7 @@ class FtpApiTest(unittest.TestCase):
         print(content)
 
     def test_upload(self):
-        filename = '/files/us-cities-demographics.csv'
-        localfile= 'tmp/us-cities-demographics.csv'
+        filename = 'doc/Github.md'
+        localfile = '../../doc/Github.md'
 
         upload_file(filename, localfile)
