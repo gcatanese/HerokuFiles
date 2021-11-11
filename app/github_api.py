@@ -43,3 +43,9 @@ def put_file(filename, content):
         print(f'create_file {filename}')
         f = repository.create_file(filename, "create_file via PyGithub", content)
 
+
+def get_user(name):
+    user = github.get_user(name)
+
+    return user
+

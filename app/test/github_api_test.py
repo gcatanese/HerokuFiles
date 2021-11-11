@@ -1,6 +1,6 @@
 import unittest
 
-from github_api import check_file_exist, get_file, put_file
+from github_api import check_file_exist, get_file, put_file, get_user
 
 
 class GithubApiTest(unittest.TestCase):
@@ -22,5 +22,10 @@ class GithubApiTest(unittest.TestCase):
 
     def test_put_file(self):
         seq = put_file("files/file.json", "{name: \"Beppe\", city: \"Amsterdam\"};")
+
+    def test_get_user(self):
+        user = get_user("perosa")
+
+        print(user.twitter_username)
 
 
