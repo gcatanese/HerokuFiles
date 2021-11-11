@@ -43,3 +43,19 @@ def get_gmail_username():
 
 def get_gmail_password():
     return os.environ.get("GMAIL_PASSWORD", "")
+
+
+def get_sftptogo_aws_access_key_id():
+    return os.environ.get('SFTPTOGO_AWS_ACCESS_KEY_ID')
+
+
+def get_sftptogo_aws_secret_access_key():
+    return os.environ.get('SFTPTOGO_AWS_SECRET_ACCESS_KEY')
+
+
+def get_sftptogo_aws_region():
+    return os.environ.get('SFTPTOGO_AWS_REGION')
+
+
+def get_sftptogo_aws_bucket_name():
+    return os.environ.get('SFTPTOGO_AWS_BUCKET_NAME')
