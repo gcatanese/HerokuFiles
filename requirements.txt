@@ -1,4 +1,4 @@
-Flask==2.0.2
+Flask==2.0.3
 requests==2.27.1
 python-dotenv===0.19.2
 PyGithub===1.55
