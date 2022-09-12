@@ -5,5 +5,5 @@ PyGithub===1.55
 dropbox===11.34.0
 boto3==1.24.69
 pyftpdlib===1.5.6
-yagmail===0.15.285
+yagmail===0.15.293
 python-gitlab===3.9.0
