@@ -3,7 +3,7 @@ requests==2.31.0
 python-dotenv===1.0.0
 PyGithub===1.58.2
 dropbox===11.36.2
-boto3==1.26.158
+boto3==1.28.1
 pyftpdlib===1.5.7
 yagmail===0.15.293
 python-gitlab===3.15.0
